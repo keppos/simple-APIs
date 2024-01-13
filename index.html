@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/858655c6be.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Startsida | osterbkehellstjo</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>startsida</h1>
+      <button id="go-to-settings">
+        <i class="fa fa-2x fa-gear"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="widgets">
+          <div class="widget">
+            <h2>IP-Address</h2>
+            <span id="ip-address"></span>
+            <br />
+            <span id="location"></span>
+          </div>
+
+          <div class="widget">
+            <h2>Daily Joke</h2>
+            <p id="joke"></p>
+          </div>
+
+          <div class="widget">
+            <h2>Bored? Try this:</h2>
+            <p id="activity"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="gpt-weather-box">
+          <h2>Ask Me Anything</h2>
+          <form id="question-form">
+            <input
+              type="text"
+              class="question-field"
+              id="question"
+              name="question"
+              placeholder="Ask a question..."
+            />
+            <button type="button" class="button" onclick="getAnswer()">
+              Ask
+            </button>
+            <p id="error-message">Invalid API Key!</p>
+            <div id="answer"></div>
+          </form>
+        </div>
+
+        <div class="gpt-weather-box" id="weather-widget">
+          <h2>Weather</h2>
+          <div id="weather-info">
+            <p>Enter a valid API Key in settings...</p>
+          </div>
+          <button type="button" class="button" onclick="getWeather()">
+            Reload
+          </button>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="settings">
+          <h2>Settings</h2>
+          <br />
+          <label for="apikey">OpenWeather API Key</label><br />
+          <input
+            type="text"
+            placeholder="Enter Weather API Key..."
+            class="question-field"
+            id="weatherapikey"
+            name="weatherapikey"
+          />
+          <br />
+          <label for="apikey">OpenAI API Key</label><br />
+          <input
+            type="text"
+            placeholder="Enter OpenAI API Key..."
+            class="question-field"
+            id="openaiapikey"
+            name="openaiapikey"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <a
+          href="https://github.com/fw-23/wdbcms23-projekt-1a-ostrohellstjo"
+          target="_blank"
+        >
+          <img
+            src="./images/github.png"
+            alt="github logo"
+            class="footer-image"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
